@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1.er Encuentro Regional por la Soberanía · Inscripción</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* CONFIGURACIÓN: reemplazar por la imagen del cliente */
+  --bg-img:url('fondo.jpg');
+  --bar:#1f4e79; --ink:#0f1e2e; --btn:#4a7de6; --txt:#3d5a80; --celeste:#2b8fd6; --foot:#1b2338; --red:#b3261e; --mist:#e6edf3;
+  --display:'Bebas Neue','Arial Narrow',Impact,sans-serif; --serif:'Newsreader',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--txt);background:#fff}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--celeste);outline-offset:2px}
+
+/* Encabezado */
+.top{background:var(--bar);padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 12px}
+.mark{display:inline-flex;align-items:center;gap:10px;background:#1c1a17;padding:8px 14px}
+.mark span{font-family:var(--display);color:#fff;font-size:1.35rem;line-height:1;letter-spacing:.02em}
+.flag{width:34px;height:26px;background:linear-gradient(#2b8fd6 0 33%,#fff 33% 66%,#2b8fd6 66%)}
+
+/* Portada */
+.hero{color:#12324f;background-color:#fff;background-image:linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.88)),var(--bg-img);background-size:cover;background-position:center}
+.wrap{max-width:960px;margin:0 auto;padding:30px 20px 52px;display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:820px){.wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding:72px 20px}}
+h1 sup{font-size:.5em;vertical-align:top;position:relative;top:.08em}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3.4rem,13vw,6rem);line-height:.92;margin:0 0 14px;letter-spacing:.01em;text-transform:uppercase}
+.lead{font-size:1.1rem;line-height:1.5;max-width:44ch;margin:0 0 22px;color:#3d5a80}
+.meta{display:grid;gap:6px;font-size:1rem;margin:0;padding:0;list-style:none}
+.meta li{padding-left:14px;border-left:3px solid var(--celeste)}
+
+/* Consigna entre banderas */
+.slogan{max-width:960px;margin:0 auto;padding:30px 20px 0;display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,22px)}
+.slogan p{margin:0;font-family:var(--display);text-transform:uppercase;text-align:center;font-size:clamp(1.45rem,5.6vw,2.4rem);line-height:1;letter-spacing:.02em;color:#12324f}
+.slogan p span{display:block}
+.bandera{flex:none;width:clamp(38px,10vw,64px);aspect-ratio:3/2;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.25);
+  background:radial-gradient(circle at 50% 50%,#f6b40e 0 14%,transparent 15%),linear-gradient(#75aadb 0 33.3%,#fff 33.3% 66.6%,#75aadb 66.6%)}
+
+/* Cuenta regresiva */
+.count{display:flex;gap:10px;margin:0 0 22px}
+.unit{min-width:76px;padding:10px 8px;border:1.5px solid #9cc3e6;border-radius:12px;text-align:center;background:rgba(43,143,214,.08)}
+.unit .num{display:block;position:relative;height:2.6rem;overflow:hidden;font-family:var(--display);font-size:2.9rem;line-height:2.6rem;font-variant-numeric:tabular-nums}
+.unit .num span{position:absolute;left:0;right:0;top:0}
+.unit .num .in{animation:rollIn .45s ease-out both}
+.unit .num .out{animation:rollOut .45s ease-in both}
+@keyframes rollIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes rollOut{from{transform:none;opacity:1}to{transform:translateY(100%);opacity:0}}
+.unit small{font-size:.8rem;color:#5a7694}
+.unit.sec{border-color:#e5251b;background:rgba(229,37,27,.08)}
+.unit.sec .num{color:#e5251b}
+.unit.sec small{color:#c0392b}
+@media(prefers-reduced-motion:reduce){.unit .num .in,.unit .num .out{animation:none}.unit .num .out{display:none}html{scroll-behavior:auto}}
+.cdmsg{font-family:var(--display);font-size:2rem;margin:0 0 22px}
+
+/* Formulario */
+.card{background:rgba(255,255,255,.72);color:#12324f;border:1px solid rgba(31,78,121,.2);border-radius:18px;padding:24px;box-shadow:0 8px 28px rgba(31,78,121,.12);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.card h2{font-family:var(--display);font-weight:400;font-size:2.2rem;letter-spacing:.02em;margin:0 0 4px}
+.card p.sub{margin:0 0 18px;color:#52667d;font-size:.95rem}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input{width:100%;font:inherit;padding:12px 14px;border:1.5px solid rgba(31,78,121,.35);border-radius:10px;background:rgba(255,255,255,.85);color:#12324f}
+input::placeholder{color:#7b8da1}
+input[aria-invalid="true"]{border-color:#d93025}
+#admin input{background:#fff;color:var(--ink);border-color:#b9c6d2}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.btn{width:100%;margin-top:20px;padding:14px;border:0;border-radius:10px;background:var(--btn);color:#fff;font:600 1rem var(--sans);text-transform:uppercase;letter-spacing:.02em;cursor:pointer}
+.btn[disabled]{opacity:.6;cursor:wait}
+.msg{margin:14px 0 0;font-size:.95rem;min-height:1.2em}
+.msg.err{color:#b3261e} .msg.ok{color:#146c43;font-weight:600}
+dialog .msg.err{color:var(--red)}
+
+/* Información */
+.info{max-width:760px;margin:0 auto;padding:48px 24px;text-align:center}
+.ejes{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:10px;grid-template-columns:1fr;text-align:left;counter-reset:p}
+@media(min-width:640px){.ejes{grid-template-columns:1fr 1fr}}
+.ejes li{counter-increment:p;display:flex;gap:12px;align-items:center;padding:12px 14px;border:1px solid #d3dde6;border-left:4px solid var(--celeste);border-radius:8px;font-weight:500;line-height:1.3}
+.ejes li::before{content:counter(p,decimal-leading-zero);font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--celeste)}
+.info h2{font-family:var(--display);font-weight:400;font-size:2.4rem;color:var(--bar);margin:0 0 12px}
+.info p{line-height:1.65;margin:0 0 24px}
+.pbtn{display:inline-block;min-width:240px;padding:14px 22px;border-radius:10px;background:var(--btn);color:#fff;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.02em}
+
+/* Pie */
+footer{background:var(--foot);color:#9fb3c6;font-size:.85rem;text-align:center;padding:22px 20px calc(env(safe-area-inset-bottom,0px) + 22px)}
+footer p{margin:0 0 8px}
+footer button{background:none;border:0;color:#9fb3c6;font:.8rem var(--sans);cursor:pointer;text-decoration:underline}
+
+/* Panel de la organización */
+dialog{border:0;border-radius:18px;padding:0;width:min(960px,94vw);max-height:90vh;color:var(--ink)}
+dialog::backdrop{background:rgba(5,12,20,.7)}
+.dlg{padding:22px;overflow:auto;max-height:90vh}
+.dlg h2{font-family:var(--display);font-weight:400;font-size:2rem;margin:0 0 12px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.row input{flex:1;min-width:160px}
+.small{width:auto;margin:0;padding:10px 16px}
+.dlg .btn{background:var(--ink);color:#fff}
+.dlg .close{background:var(--mist);color:var(--ink)}
+.tw{overflow-x:auto;border:1px solid #d3dde6;border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #e3eaf0;white-space:nowrap}
+th{background:var(--mist)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="mark"><span>ENCUENTRO REGIONAL<br>POR LA SOBERANÍA</span><i class="flag" aria-hidden="true"></i></div>
+</header>
+
+<section class="hero">
+  <div class="slogan">
+    <i class="bandera" aria-hidden="true"></i>
+    <p><span>Fuera ingleses de Malvinas</span><span>Fuera yanquis de América Latina</span></p>
+    <i class="bandera" aria-hidden="true"></i>
+  </div>
+  <div class="wrap">
+    <div>
+      <h1>1.<sup>er</sup> Encuentro Regional por la Soberanía</h1>
+      <p class="lead">Encuentro abierto y gratuito en la Universidad Nacional del Delta. Inscripción previa.</p>
+      <div id="cd" aria-live="off"></div>
+      <ul class="meta">
+        <li>Sábado 28 de noviembre de 2026</li>
+        <li>Universidad Nacional del Delta, Av. Avellaneda 2270, Virreyes, San Fernando</li>
+      </ul>
+    </div>
+    <section class="card" id="inscripcion" aria-labelledby="t-ins">
+    <h2 id="t-ins">Inscripción</h2>
+    <p class="sub">Los tres datos son obligatorios.</p>
+    <form id="form" novalidate>
+      <label for="nombre">Nombre y apellido</label>
+      <input id="nombre" name="nombre" autocomplete="name" required>
+      <label for="telefono">Teléfono</label>
+      <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" autocomplete="email" required>
+      <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" id="enviar" type="submit">Inscribirme al encuentro</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+  </div>
+</section>
+
+<section class="info">
+  <h2>Ejes temáticos / Paneles</h2>
+  <ul class="ejes">
+    <li>Soberanía y Movimiento Obrero</li>
+    <li>Geopolítica y Situación Internacional</li>
+    <li>Soberanía y Ambiental</li>
+    <li>Soberanía y Defensa de la Educación Pública</li>
+    <li>Soberanía y Defensa Nacional</li>
+    <li>Soberanía y Derechos Sociales</li>
+    <li>Soberanía, Cultura y Comunicación</li>
+    <li>Soberanía e Industria Naval</li>
+    <li>Soberanía y Derechos Humanos</li>
+    <li>Soberanía y Salud Mental</li>
+  </ul>
+  <a class="pbtn" href="https://www.google.com/maps/search/?api=1&query=Av.+Avellaneda+2270+Virreyes+San+Fernando" target="_blank" rel="noopener">Cómo llegar</a>
+</section>
+
+<footer>
+  <p>© 2026 1.er Encuentro Regional por la Soberanía · Universidad Nacional del Delta</p>
+  <button id="abrirAdmin" type="button">Acceso de la organización</button>
+</footer>
+
+<dialog id="admin">
+  <div class="dlg">
+    <h2>Panel de inscriptos</h2>
+    <form id="login" class="row">
+      <input id="u" placeholder="Usuario" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+      <input id="p" type="password" placeholder="Contraseña" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+      <button class="btn small" type="submit">Ingresar</button>
+      <button class="btn small close" type="button" data-close>Cerrar</button>
+    </form>
+    <p class="msg" id="amsg" role="status"></p>
+    <div id="panel" hidden>
+      <div class="row">
+        <strong id="total"></strong>
+        <input id="buscar" placeholder="Buscar por nombre o correo">
+        <button class="btn small" id="csv" type="button">Descargar CSV</button>
+        <a class="btn small" style="display:inline-block;text-decoration:none" href="asistentes.html#agregar">Agregar manualmente</a>
+        <button class="btn small close" type="button" data-close>Cerrar</button>
+      </div>
+      <div class="tw"><table><thead><tr><th>Fecha</th><th>Nombre</th><th>Teléfono</th><th>Correo</th></tr></thead><tbody id="tb"></tbody></table></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* ====== CONFIGURACIÓN ====== */
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzn3AJxYcZg5P4qaTxAWZUMhEWaMBUoU8xYJWsWo8sP71BT3T-hJVe5Uy1xcWIc2Sk-3w/exec';
+const EVENTO = new Date('2026-11-28T00:00:00-03:00'); // 28/11/2026, hora de Argentina (ajustar la hora de inicio)
+/* =========================== */
+
+const $ = id => document.getElementById(id);
+async function api(body){
+  const r = await fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)});
+  return r.json();
+}
+
+/* Cuenta regresiva */
+const UNITS=[['d','días'],['h','horas'],['m','minutos'],['s','segundos']];
+let cdBuilt=false, prev={};
+function setNum(el,txt){
+  if(el.dataset.v===txt) return;
+  const old=el.dataset.v; el.dataset.v=txt;
+  el.innerHTML=(old===undefined?'':'<span class="out">'+old+'</span>')+'<span class="in">'+txt+'</span>';
+}
+function tick(){
+  const ms=EVENTO-Date.now(), el=$('cd');
+  if(ms<=0){el.innerHTML='<p class="cdmsg">El encuentro ya comenzó.</p>';return false;}
+  if(!cdBuilt){
+    el.innerHTML='<div class="count" role="timer">'+UNITS.map(u=>'<div class="unit'+(u[0]==='s'?' sec':'')+'"><span class="num" data-u="'+u[0]+'"></span><small>'+u[1]+'</small></div>').join('')+'</div>';
+    cdBuilt=true;
+  }
+  const t=Math.floor(ms/1000), v={d:Math.floor(t/86400),h:Math.floor(t%86400/3600),m:Math.floor(t%3600/60),s:t%60};
+  UNITS.forEach(u=>setNum(el.querySelector('[data-u="'+u[0]+'"]'),String(v[u[0]]).padStart(2,'0')));
+  return true;
+}
+if(tick()){const iv=setInterval(()=>{if(!tick())clearInterval(iv);},1000);}
+
+/* Inscripción */
+$('form').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const f = e.target, m = $('msg');
+  const d = {action:'register',nombre:f.nombre.value.trim(),telefono:f.telefono.value.trim(),correo:f.correo.value.trim(),web:f.web.value};
+  let bad = [];
+  if(d.nombre.length<3) bad.push(f.nombre);
+  if(d.telefono.replace(/\D/g,'').length<7) bad.push(f.telefono);
+  if(!/^\S+@\S+\.\S+$/.test(d.correo)) bad.push(f.correo);
+  [f.nombre,f.telefono,f.correo].forEach(i=>i.setAttribute('aria-invalid',bad.includes(i)));
+  m.className='msg';
+  if(bad.length){m.className='msg err';m.textContent='Revisá los campos marcados: nombre completo, teléfono con al menos 7 dígitos y un correo válido.';bad[0].focus();return;}
+  $('enviar').disabled=true;m.textContent='Enviando…';
+  try{
+    const r = await api(d);
+    if(r.ok){f.reset();m.className='msg ok';m.textContent='¡Listo! Tu inscripción quedó registrada. Te enviamos un correo de confirmación (revisá también spam).';}
+    else{m.className='msg err';m.textContent=r.error||'No se pudo registrar. Intentá de nuevo.';}
+  }catch(_){m.className='msg err';m.textContent='No hay conexión con el servidor. Probá de nuevo en unos minutos.';}
+  $('enviar').disabled=false;
+});
+
+/* Acceso de la organización */
+let rows=[];
+const dlg=$('admin');
+$('abrirAdmin').onclick=()=>dlg.showModal();
+dlg.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>{try{sessionStorage.removeItem('cred');}catch(_){}dlg.close();$('panel').hidden=true;$('login').hidden=false;rows=[];$('p').value='';});
+$('login').addEventListener('submit', async e=>{
+  e.preventDefault();$('amsg').className='msg';$('amsg').textContent='Verificando…';
+  try{
+    const r=await api({action:'list',user:$('u').value.trim(),pass:$('p').value});
+    if(!r.ok){$('amsg').className='msg err';$('amsg').textContent='Usuario o contraseña incorrectos.';return;}
+    rows=r.rows;$('amsg').textContent='';$('login').hidden=true;$('panel').hidden=false;draw();
+    try{sessionStorage.setItem('cred',JSON.stringify({user:$('u').value.trim(),pass:$('p').value}));}catch(_){}
+  }catch(_){$('amsg').className='msg err';$('amsg').textContent='No se pudo conectar con la planilla.';}
+});
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function draw(){
+  const q=$('buscar').value.toLowerCase();
+  const v=rows.filter(r=>(r[1]+' '+r[3]).toLowerCase().includes(q));
+  $('total').textContent=rows.length+' inscriptos';
+  $('tb').innerHTML=v.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')||'<tr><td colspan="4">Sin resultados.</td></tr>';
+}
+$('buscar').oninput=draw;
+$('csv').onclick=()=>{
+  const q=s=>'"'+String(s).replace(/"/g,'""').replace(/^([=+\-@])/,"'$1")+'"';
+  const csv='\ufeff'+[['Fecha','Nombre','Telefono','Correo'],...rows].map(r=>r.map(q).join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='inscriptos.csv';a.click();
+};
+</script>
+</body>
+</html>
