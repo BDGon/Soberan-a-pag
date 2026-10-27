@@ -139,7 +139,7 @@ th{background:var(--mist)}
       <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
       <label for="correo">Correo electrónico</label>
       <input id="correo" name="correo" type="email" autocomplete="email" required>
-      <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input class="hp" name="hp_c9x" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn" id="enviar" type="submit">Inscribirme al encuentro</button>
       <p class="msg" id="msg" role="status" aria-live="polite"></p>
     </form>
@@ -229,7 +229,7 @@ if(tick()){const iv=setInterval(()=>{if(!tick())clearInterval(iv);},1000);}
 $('form').addEventListener('submit', async e=>{
   e.preventDefault();
   const f = e.target, m = $('msg');
-  const d = {action:'register',nombre:f.nombre.value.trim(),telefono:f.telefono.value.trim(),correo:f.correo.value.trim(),web:f.web.value};
+  const d = {action:'register',nombre:f.nombre.value.trim(),telefono:f.telefono.value.trim(),correo:f.correo.value.trim(),web:f.hp_c9x.value};
   let bad = [];
   if(d.nombre.length<3) bad.push(f.nombre);
   if(d.telefono.replace(/\D/g,'').length<7) bad.push(f.telefono);
